@@ -5,7 +5,7 @@ const menuItems = [
     category: "Food",
     description: "Beef burger with cheese and fresh vegetables.",
     price: 8,
-    image: "images/burger.png"
+    image: `${import.meta.env.BASE_URL}images/burger.png`
   },
   {
     id:2,
@@ -13,7 +13,7 @@ const menuItems = [
     category: "Food",
     description :"Fresh pizza with tomato sauce, mozzarella, and basil.",
     price : 10,
-    image:"images/pizza.png"
+    image:`${import.meta.env.BASE_URL}images/pizza.png`
 
   },
   {
@@ -22,7 +22,7 @@ const menuItems = [
     category: "Food",
     description: "Creamy pasta with chicken, mushrooms, and parmesan.",
     price: 9,
-    image: "images/fettucine.png"
+    image: `${import.meta.env.BASE_URL}images/fettucine.png`
   },
   {
   id: 4,
@@ -30,7 +30,7 @@ const menuItems = [
   category: "Drinks",
   description: "Hot coffee with a rich and smooth flavor.",
   price: 4,
-  image: "images/coffee.png"
+  image: `${import.meta.env.BASE_URL}images/coffee.png`
 },
 {
   id: 5,
@@ -38,7 +38,7 @@ const menuItems = [
   category: "Drinks",
   description: "Freshly squeezed orange juice served cold.",
   price: 5,
-  image: "images/juice.png"
+  image: `${import.meta.env.BASE_URL}images/juice.png`
 },
 {
   id: 6,
@@ -46,7 +46,7 @@ const menuItems = [
   category: "Drinks",
   description: "Refreshing lime and mint mojito served with ice.",
   price: 6,
-  image: "images/mojito.png"
+  image: `${import.meta.env.BASE_URL}images/mojito.png`
 },
 {
   id: 7,
@@ -54,7 +54,7 @@ const menuItems = [
   category: "Desserts",
   description: "Rich chocolate cake with creamy chocolate layers.",
   price: 6,
-  image: "images/cake.png"
+  image: `${import.meta.env.BASE_URL}images/cake.png`
 },
 {
   id: 8,
@@ -62,7 +62,7 @@ const menuItems = [
   category: "Desserts",
   description: "A delicious mix of chocolate, vanilla, and strawberry ice cream.",
   price: 5,
-  image: "images/ice-cream.png"
+  image: `${import.meta.env.BASE_URL}images/ice-cream.png`
 },
 {
   id: 9,
@@ -70,7 +70,7 @@ const menuItems = [
   category: "Desserts",
   description: "Warm chocolate brownie served with vanilla ice cream.",
   price: 6,
-  image: "images/brownie.png"
+  image: `${import.meta.env.BASE_URL}images/brownie.png`
 }
 ];
 
