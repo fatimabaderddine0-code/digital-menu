@@ -307,13 +307,15 @@
    SEARCH
 ========================= */
 .search-container {
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
+  gap: 10px;
 
-  background-color: white;
+  background: white;
   border: 1px solid #a8755a;
   border-radius: 30px;
 
@@ -328,19 +330,23 @@
 
 .search-input {
   flex: 1;
+  min-width: 0;
 
-  border: none;
-  outline: none;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 
-  padding: 14px 12px;
+  background: transparent !important;
+  border-radius: 0 !important;
 
-  background: transparent;
+  padding: 14px 0;
   color: #4a3328;
 }
-.search-input:focus {
-  border-color: #8b5e46;
 
-  box-shadow: 0 0 0 3px rgba(139, 94, 70, 0.12);
+.search-input:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 
