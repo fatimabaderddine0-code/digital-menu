@@ -467,7 +467,22 @@
 .dark-mode .search-icon {
   color: #d8c8bf;
 }
+.dark-mode .search-container {
+  background: #33251f;
+  border-color: #6b4636;
+}
 
+.dark-mode .search-input {
+  color: white;
+}
+
+.dark-mode .search-input::placeholder {
+  color: #cdbbb1;
+}
+
+.dark-mode .search-icon {
+  color: #d5a98f;
+}
 
 /* =========================
    FOOTER
