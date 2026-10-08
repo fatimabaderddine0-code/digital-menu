@@ -652,3 +652,21 @@
   margin: 0;
   padding: 2px;
 }
+.hero-section {
+  min-height: 520px;
+
+  background:
+    linear-gradient(
+      rgba(35, 20, 12, 0.35),
+      rgba(35, 20, 12, 0.35)
+    ),
+    url("/images/Golden-Hour.png");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  padding: 60px 10%;
+}

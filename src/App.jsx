@@ -2,6 +2,7 @@ import MenuItem from "./components/MenuItem";
 import { useEffect, useState } from "react";
 import "./App.css";
 import { FaBars } from "react-icons/fa";
+
 import {
   FaMoon,
   FaSun,
@@ -17,6 +18,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [heroImage, setHeroImage] = useState("");
 
   useEffect(() => {
     let url = "http://localhost:5000/api/items";
@@ -43,6 +45,24 @@ function App() {
         console.log("Error loading menu items:", error);
       });
   }, [search, selectedCategory]);
+  useEffect(() => {
+  fetch("http://localhost:5000/api/sections")
+    .then((response) => response.json())
+    .then((data) => {
+      const heroSection = data.find(
+        (section) => section.section_name === "hero"
+      );
+
+      if (heroSection && heroSection.image) {
+        setHeroImage(
+          `http://localhost:5000/uploads/${heroSection.image}`
+        );
+      }
+    })
+    .catch((error) => {
+      console.log("Hero image error:", error);
+    });
+}, []);
 
   return (
     <div className={darkMode ? "dark-mode min-vh-100" : "light-mode min-vh-100"}>
@@ -78,7 +98,15 @@ function App() {
       </nav>
 
       {/* HERO */}
-      <section className="hero-section" id="home">
+      <section
+  className="hero-section"
+  id="home"
+  style={{
+    backgroundImage: heroImage
+      ? `linear-gradient(rgba(35,20,12,.35), rgba(35,20,12,.35)), url(${heroImage})`
+      : undefined,
+  }}
+>
         <div className="hero-content">
           <h1>Welcome to La Tavola</h1>
          
