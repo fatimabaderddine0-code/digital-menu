@@ -21,7 +21,7 @@ function App() {
   const [heroImage, setHeroImage] = useState("");
 
   useEffect(() => {
-    let url = "http://localhost:5000/api/items";
+    let url = "https://digital-menu-backend-731h.onrender.com/api/items";
     const params = [];
 
     if (search) {
@@ -46,7 +46,7 @@ function App() {
       });
   }, [search, selectedCategory]);
   useEffect(() => {
-  fetch("http://localhost:5000/api/sections")
+  fetch("https://digital-menu-backend-731h.onrender.com/api/sections")
     .then((response) => response.json())
     .then((data) => {
       const heroSection = data.find(
@@ -55,7 +55,7 @@ function App() {
 
       if (heroSection && heroSection.image) {
         setHeroImage(
-          `http://localhost:5000/uploads/${heroSection.image}`
+          `https://digital-menu-backend-731h.onrender.com/uploads/${heroSection.image}`
         );
       }
     })
@@ -242,7 +242,7 @@ function App() {
                     name={item.name}
                     image={
                       item.image
-                        ? `http://localhost:5000/uploads/${item.image}`
+                      ? ` https://digital-menu-backend-731h.onrender.com//uploads/${item.image}`
                         : "/images/default.jpg"
                     }
                     description={item.description}
