@@ -54,9 +54,7 @@ function App() {
       );
 
       if (heroSection && heroSection.image) {
-        setHeroImage(
-          `https://digital-menu-backend-731h.onrender.com/uploads/${heroSection.image}`
-        );
+        setHeroImage(heroSection.image);
       }
     })
     .catch((error) => {
@@ -242,7 +240,7 @@ function App() {
                     name={item.name}
                     image={
                       item.image
-                      ? ` https://digital-menu-backend-731h.onrender.com//uploads/${item.image}`
+                      ? item.image
                         : "/images/default.jpg"
                     }
                     description={item.description}
